@@ -1,0 +1,341 @@
+{
+	"info": {
+		"_postman_id": "d171d39c-718a-4c9c-ae9d-e234135c8556",
+		"name": "NoSQL - mongodb - ticketbooking",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "14372523"
+	},
+	"item": [
+		{
+			"name": "GET ticket-booking/migrate",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/v1/migrate"
+			},
+			"response": []
+		},
+		{
+			"name": "GET ticket-booking/getAllUsers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/v1/users"
+			},
+			"response": []
+		},
+		{
+			"name": "GET ticket-booking/getUserById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/v1/users/64327d77107ee468fccf4abd"
+			},
+			"response": []
+		},
+		{
+			"name": "GET ticket-booking/getEventById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/v1/events/6432b4cec08121589838d984"
+			},
+			"response": []
+		},
+		{
+			"name": "GET ticket-booking/getEventByTitle",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/v1/events/title/Third event"
+			},
+			"response": []
+		},
+		{
+			"name": "GET ticket-booking/getEventByDate",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/v1/events/day/2022-08-1 14:20"
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE ticket-booking/deleteUser",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:8080/v1/users/64328cc767a7d10b0cdb92a8"
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE ticket-booking/deleteEvent",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:8080/v1/events/64327d78107ee468fccf4ac6"
+			},
+			"response": []
+		},
+		{
+			"name": "GET ticket-booking/getUserByEmail",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/v1/users/email/sara@gmail.com"
+			},
+			"response": []
+		},
+		{
+			"name": "GET ticket-booking/getUsersByName",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/v1/users/name/Kate"
+			},
+			"response": []
+		},
+		{
+			"name": "POST ticket-booking/create events",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/events?title=Fifth event&day=2022-06-1 14:20&price=230",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"events"
+					],
+					"query": [
+						{
+							"key": "title",
+							"value": "Fifth event"
+						},
+						{
+							"key": "day",
+							"value": "2022-06-1 14:20"
+						},
+						{
+							"key": "price",
+							"value": "230"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST ticket-booking/createEvent",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1/events?title=First migrated event&day=2022-08-1 14:20&price=200",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"events"
+					],
+					"query": [
+						{
+							"key": "title",
+							"value": "First migrated event"
+						},
+						{
+							"key": "day",
+							"value": "2022-08-1 14:20"
+						},
+						{
+							"key": "price",
+							"value": "200"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST ticket-booking/createUser",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1/users?name=Ann&email=ann@test.com&money=1500.00",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"users"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Ann"
+						},
+						{
+							"key": "email",
+							"value": "ann@test.com"
+						},
+						{
+							"key": "money",
+							"value": "1500.00"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT ticket-booking/updateUser",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1/users?name=Ann&email=ann@test.com&money=1500.00&id=643294f6cd1c6c7d28ccc28b",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"users"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Ann"
+						},
+						{
+							"key": "email",
+							"value": "ann@test.com"
+						},
+						{
+							"key": "money",
+							"value": "1500.00"
+						},
+						{
+							"key": "id",
+							"value": "643294f6cd1c6c7d28ccc28b"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST ticket-booking/create tickets",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/tickets?userId=3&eventId=5&place=1&category=STANDARD",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tickets"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "3"
+						},
+						{
+							"key": "eventId",
+							"value": "5"
+						},
+						{
+							"key": "place",
+							"value": "1"
+						},
+						{
+							"key": "category",
+							"value": "STANDARD"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST ticket-booking/bookTicket",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1/tickets?userId=64327d77107ee468fccf4abd&eventId=6432b4cec08121589838d984&place=2&category=STANDARD",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"tickets"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "64327d77107ee468fccf4abd"
+						},
+						{
+							"key": "eventId",
+							"value": "6432b4cec08121589838d984"
+						},
+						{
+							"key": "place",
+							"value": "2"
+						},
+						{
+							"key": "category",
+							"value": "STANDARD"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET ticket-booking/getTicketsByUser",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/v1/tickets/user/64327d77107ee468fccf4abd"
+			},
+			"response": []
+		},
+		{
+			"name": "GET ticket-booking/getTicketsByEvent",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/v1/tickets/event/6432b4cec08121589838d984"
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE ticket-booking/cancelTicket",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:8080/v1/tickets/6432b849c08121589838d986"
+			},
+			"response": []
+		}
+	]
+}
