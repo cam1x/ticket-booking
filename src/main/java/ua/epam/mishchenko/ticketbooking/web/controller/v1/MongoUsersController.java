@@ -90,7 +90,7 @@ public class MongoUsersController {
         MongoUser user = MongoUser.builder().name(name).email(email)
                 .userAccount(MongoUserAccount.builder().money(money).build())
                 .build();
-        log.info("Creating user ", user.toString());
+        log.info("Creating user {}", user.toString());
         Map<String, Object> model = new HashMap<>();
         MongoUser createdUser = service.createUser(user);
         if (Objects.isNull(createdUser)) {

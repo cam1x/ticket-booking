@@ -9,6 +9,9 @@ import ua.epam.mishchenko.ticketbooking.model.mongo.MongoEvent;
 import ua.epam.mishchenko.ticketbooking.model.mongo.MongoTicket;
 import ua.epam.mishchenko.ticketbooking.model.mongo.MongoUser;
 import ua.epam.mishchenko.ticketbooking.model.mongo.MongoUserAccount;
+import ua.epam.mishchenko.ticketbooking.service.EventService;
+import ua.epam.mishchenko.ticketbooking.service.TicketService;
+import ua.epam.mishchenko.ticketbooking.service.UserService;
 import ua.epam.mishchenko.ticketbooking.service.mongo.MigrationService;
 import ua.epam.mishchenko.ticketbooking.service.mongo.MongoEventService;
 import ua.epam.mishchenko.ticketbooking.service.mongo.MongoTicketService;
@@ -31,13 +34,12 @@ public class MigrationServiceImpl implements MigrationService {
     private final MongoTicketService mongoTicketService;
 
     public boolean migrateToMongoDB() {
-        boolean migrationSussess = true;
-        migrationSussess = migrationSussess && migrateUsers();
+        boolean migrationSussess = migrateUsers();
         if (migrationSussess) {
-            migrationSussess = migrationSussess && migrateEvents();
+            migrationSussess = migrateEvents();
         }
         if (migrationSussess) {
-            migrationSussess = migrationSussess && migrateTickets();
+            migrationSussess = migrateTickets();
         }
         return migrationSussess;
     }

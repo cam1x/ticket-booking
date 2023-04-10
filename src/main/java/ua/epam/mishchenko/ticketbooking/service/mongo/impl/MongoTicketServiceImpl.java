@@ -7,6 +7,7 @@ import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.stereotype.Service;
+import ua.epam.mishchenko.ticketbooking.model.Category;
 import ua.epam.mishchenko.ticketbooking.model.mongo.MongoEvent;
 import ua.epam.mishchenko.ticketbooking.model.mongo.MongoTicket;
 import ua.epam.mishchenko.ticketbooking.model.mongo.MongoUser;

@@ -7,6 +7,10 @@ import ua.epam.mishchenko.ticketbooking.model.Event;
 import ua.epam.mishchenko.ticketbooking.model.Ticket;
 import ua.epam.mishchenko.ticketbooking.model.User;
 import ua.epam.mishchenko.ticketbooking.model.UserAccount;
+import ua.epam.mishchenko.ticketbooking.service.EventService;
+import ua.epam.mishchenko.ticketbooking.service.TicketService;
+import ua.epam.mishchenko.ticketbooking.service.UserAccountService;
+import ua.epam.mishchenko.ticketbooking.service.UserService;
 import ua.epam.mishchenko.ticketbooking.service.mongo.MigrationService;
 
 import java.math.BigDecimal;
